@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest; exit 0",
+    "test": "jest --watchAll; exit 0",
     "start": "webpack-dev-server --open",
     "lint": "eslint src/*.jsx src/**/**; exit 0",
     "lint-fix": "eslint src/*.jsx src/**/** --fix; exit 0"
