@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import { HashRouter } from 'react-router-dom';
-import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './reducers/index';
@@ -15,7 +14,7 @@ const render = (Component) => {
       <Provider store={store}>
         <Component/>
       </Provider>
-    </HashRouter>
+    </HashRouter>,
     document.getElementById('react-app-root')
   );
 };
@@ -23,7 +22,7 @@ const render = (Component) => {
 render(App);
 /*eslint-disable */
 if (module.hot) {
-	module.hot.accept('./components/App', () => {
+	module.hot.accept(require('./components/App'), () => {
 		render(App);
 	});
 }
