@@ -12,7 +12,7 @@ describe('playerReducer', () => {
   });
 
   test('Should initiate player state', () => {
-    expect(playerReducer(playerState, { type: c.PLAYER_TOGGLE})).toEqual({
+    expect(playerReducer(playerState, { type: c.PLAYER_TOGGLE })).toEqual({
       player: false
     });
   });
