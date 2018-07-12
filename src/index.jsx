@@ -5,6 +5,7 @@ import { HashRouter } from 'react-router-dom';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import rootReducer from './reducers/index';
 
 const store = createStore(rootReducer);
 
